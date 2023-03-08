@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:15
+    env_file: .env
+    volumes:
+      - ./local-db:/var/lib/postgresql/data
+
+    
+
+  web:
+   build: .
+   ports:
+    - 8000:8000
+   volumes:
+    - ./proiect:/app
+   env_file: .env
+   links:
+     - db
+   depends_on:
+    - db
