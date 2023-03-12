@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Scoala, ClaseScoala, Profesori
+from .models import Scoala, ClaseScoala, Profesori, Elevi
 
 class ScoalaAdmin(admin.ModelAdmin):
     list_display = ("nume_scoala", )
@@ -16,8 +16,14 @@ class ProfesorAdmin(admin.ModelAdmin):
     list_display = ("nume_profesor", "materie")
     list_filter = ("scoala", )
     search_fields = ("nume_profesor", "materie",)
+    
+class ElevAdmin(admin.ModelAdmin):
+    list_display = ("nume_elev", "clasa")
+    list_filter = ("scoala", "clasa", "nume_elev" )
+    search_fields = ("clasa", "nume_elev",)
 
 # Register your models here.
 admin.site.register(Scoala, ScoalaAdmin)
 admin.site.register(ClaseScoala, ClaseAdmin)
 admin.site.register(Profesori, ProfesorAdmin)
+admin.site.register(Elevi, ElevAdmin)
