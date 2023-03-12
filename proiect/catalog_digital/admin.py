@@ -9,7 +9,7 @@ class ScoalaAdmin(admin.ModelAdmin):
     
 class ClaseAdmin(admin.ModelAdmin):
     list_display = ("scoala", "nume_clasa")
-    list_filter = ("scoala", )
+    list_filter = ("scoala", "nume_clasa" )
     search_fields = ("scoala", "nume_clasa", "promotia")
 
 # Register your models here.
