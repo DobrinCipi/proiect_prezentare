@@ -26,3 +26,16 @@ class ClaseScoala(models.Model):
     
     def __str__(self):
         return f"{self.scoala} {self.nume_clasa}"
+    
+class Profesori(models.Model):
+    class Meta():
+        verbose_name_plural = "Profesori"
+        
+    nume_profesor = models.CharField(max_length=30)
+    materie = models.CharField(max_length=20)
+    numar_telefon_profesor = models.IntegerField()
+    adresa_mail_profesor = models.EmailField()
+    profesor = models.OneToOneField(Scoala, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f"{self.nume_profesor} {self.materie}"
