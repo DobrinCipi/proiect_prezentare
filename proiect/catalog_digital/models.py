@@ -53,3 +53,15 @@ class Elevi(models.Model):
     
     def __str__(self):
         return f"{self.nume_elev} {self.adresa_mail_elev}"
+    
+class ParinteElev(models.Model):
+    class Meta():
+        verbose_name_plural = "Parinti"
+        
+    nume_parinte = models.CharField(max_length=30)
+    numar_telefon_parinte = models.IntegerField()
+    adresa_mail_parinte = models.EmailField()
+    copil = models.OneToOneField(Elevi, on_delete=models.CASCADE)
+        
+    def __str__(self):
+        return f"{self.nume_parinte} {self.copil}"
