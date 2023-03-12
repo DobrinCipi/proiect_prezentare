@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Scoala, ClaseScoala, Profesori, Elevi
+from .models import Scoala, ClaseScoala, Profesori, Elevi, ParinteElev
 
 class ScoalaAdmin(admin.ModelAdmin):
     list_display = ("nume_scoala", )
@@ -27,3 +27,4 @@ admin.site.register(Scoala, ScoalaAdmin)
 admin.site.register(ClaseScoala, ClaseAdmin)
 admin.site.register(Profesori, ProfesorAdmin)
 admin.site.register(Elevi, ElevAdmin)
+admin.site.register(ParinteElev)
