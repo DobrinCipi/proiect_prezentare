@@ -9,6 +9,7 @@ class Scoala(models.Model):
     nume_scoala = models.CharField(unique=True, max_length= 33)
     nume_director = models.CharField(max_length=20)
     adresa_scoala = models.CharField(unique=True, max_length=50)
+    oras = models.CharField(max_length=30)
     judet = models.CharField(max_length=50)
     
     
