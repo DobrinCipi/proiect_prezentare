@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.mail import send_mail
+
 
 # Create your views here.
 def home(request):
@@ -7,13 +9,26 @@ def home(request):
 
 def contact(request):
     if request.method == "POST":
-        name = request.POST['name']
-        email = request.POST['email']
-        subject = request.POST['subject']
-        message = request.POST['message']  
-        return render(request, "contact.html", {'name': name})
+        name_form = request.POST['name_form']
+        email_form = request.POST['email_form']
+        subject_form = request.POST['subject_form']
+        message_form = request.POST['message_form']  
+        
+        # send an email 
+        
+        send_mail(
+            subject_form + name_form,
+            message_form,
+            email_form,
+            ['myschool796@yahoo.com'],    
+        )
+        
+        
+        return render(request, "contact.html", {'name_form': name_form})
     else:
         return render(request, "contact.html", {})
+    
+
 
 def about(request):
     return render(request, "about.html", {})
