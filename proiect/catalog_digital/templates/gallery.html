@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,24 +10,24 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{% static 'catalog_digital/img/favicon.ico'%}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+    <link href="{% static 'catalog_digital/https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap'%}" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css'%}" rel="stylesheet">
 
     <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+    <link href="{% static 'catalog_digital/lib/lightbox/css/lightbox.min.css'%}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/css/style.css'%}" rel="stylesheet">
 </head>
 
 <body>
@@ -47,13 +48,6 @@
                     <a href="class.html" class="nav-item nav-link">Classes</a>
                     <a href="team.html" class="nav-item nav-link">Teachers</a>
                     <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="single.html" class="dropdown-item">Blog Detail</a>
-                        </div>
-                    </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <a href="" class="btn btn-primary px-4">Join Class</a>
@@ -97,9 +91,9 @@
             <div class="row portfolio-container">
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'catalog_digital/img/portfolio-1.jpg'%}" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'catalog_digital/img/portfolio-1.jpg'%}" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -107,9 +101,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'catalog_digital/img/portfolio-2.jpg'%}" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'catalog_digital/img/portfolio-2.jpg'%}" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -117,9 +111,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'catalog_digital/img/portfolio-3.jpg'%}" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'catalog_digital/img/portfolio-3.jpg'%}" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -127,9 +121,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'catalog_digital/img/portfolio-4.jpg'%}" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'catalog_digital/img/portfolio-4.jpg'%}" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -137,9 +131,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'catalog_digital/img/portfolio-5.jpg'%}" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'catalog_digital/img/portfolio-5.jpg'%}" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -147,9 +141,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'catalog_digital/img/portfolio-6.jpg'%}" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'catalog_digital/img/portfolio-6.jpg'%}" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -248,19 +242,19 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="{% static 'catalog_digital/https://code.jquery.com/jquery-3.4.1.min.js'%}"></script>
+    <script src="{% static 'catalog_digital/https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'catalog_digital/lib/easing/easing.min.js'%}"></script>
+    <script src="{% static 'catalog_digital/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'catalog_digital/lib/isotope/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'catalog_digital/lib/lightbox/js/lightbox.min.js'%}"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="{% static 'catalog_digital/mail/jqBootstrapValidation.min.js'%}"></script>
+    <script src="{% static 'catalog_digital/mail/contact.js'%}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{% static 'catalog_digital/js/main.js'%}"></script>
 </body>
 
 </html>

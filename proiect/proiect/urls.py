@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from catalog_digital.views import home, contact, about, classs, index, team
+from catalog_digital.views import home, contact, about, classs, index, team, gallery
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +24,6 @@ urlpatterns = [
     path('about.html', about, name='about'),
     path('index.html', index, name='index'),
     path('class.html', classs, name='class'),
-    path('team.html', team, name='teachers')
+    path('team.html', team, name='teachers'),
+    path('gallery.html', gallery, name='gallery'),
     ]

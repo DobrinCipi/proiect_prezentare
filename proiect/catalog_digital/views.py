@@ -26,3 +26,6 @@ def classs(request):
 
 def team(request):
     return render(request, "team.html", {})
+
+def gallery(request):
+    return render(request, "gallery.html", {})
