@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,24 +10,24 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{% static 'catalog_digital/img/favicon.ico' %}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+    <link href="{% static 'catalog_digital/https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap' %}" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet' %}">
 
     <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'catalog_digital/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'catalog_digital/css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -87,7 +88,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
+                        <img class="card-img-top mb-2" src="{% static 'catalog_digital/img/class-1.jpg' %}" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Drawing Class</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
@@ -115,7 +116,7 @@
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-2.jpg" alt="">
+                        <img class="card-img-top mb-2" src="{% static 'catalog_digital/img/class-2.jpg' %}" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Language Learning</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
@@ -143,7 +144,7 @@
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-3.jpg" alt="">
+                        <img class="card-img-top mb-2" src="{% static 'catalog_digital/img/class-3.jpg' %}" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Basic Science</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
@@ -313,19 +314,19 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="{% static 'catalog_digital/https://code.jquery.com/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'catalog_digital/https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'catalog_digital/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'catalog_digital/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'catalog_digital/lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'catalog_digital/lib/lightbox/js/lightbox.min.js' %}"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="{% static 'catalog_digital/mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'catalog_digital/mail/contact.js' %}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{% static 'catalog_digital/js/main.js' %}"></script>
 </body>
 
 </html>
