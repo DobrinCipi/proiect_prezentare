@@ -87,7 +87,7 @@
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center pb-2">
-                <p class="section-title px-5"><span class="px-2">Get In Touch</span></p>
+                <p class="section-title px-5"><span class="px-2">Get In Touch - {{ name  }}</span></p>
                 <h1 class="mb-4">Contact Us </h1>
             </div>
             <div class="row">
@@ -213,7 +213,8 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h3 class="text-primary mb-4">Newsletter</h3>
-                <form action="">
+                <form action="{% url "contact"%}">
+                    {% csrf_token %}
                     <div class="form-group">
                         <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
                     </div>

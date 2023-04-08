@@ -6,7 +6,14 @@ def home(request):
     return render(request, "home.html", {})
 
 def contact(request):
-    return render(request, "contact.html", {})
+    if request.method == "POST":
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']  
+        return render(request, "contact.html", {'name': name})
+    else:
+        return render(request, "contact.html", {})
 
 def about(request):
     return render(request, "about.html", {})
