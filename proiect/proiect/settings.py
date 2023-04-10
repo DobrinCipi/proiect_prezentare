@@ -133,11 +133,19 @@ STATICFILES_DIRS = [
 ]
 
 # email settings
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = '1025'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
+#EMAIL_HOST = 'localhost'
+#EMAIL_PORT = '1025'
+#EMAIL_HOST_USER = ''
+#EMAIL_HOST_PASSWORD = ''
+#EMAIL_USE_TLS = False
+#EMAIL_USE_SSL = False
 
+#yahoo mail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.yahoo.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'myschool796@yahoo.com'
+EMAIL_HOST_PASSWORD = 'AddPass'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 

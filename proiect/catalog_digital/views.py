@@ -17,13 +17,12 @@ def contact(request):
         # send an email 
         
         send_mail(
-            subject_form + name_form,
+            name_form,
             message_form,
             email_form,
             ['myschool796@yahoo.com'],    
         )
-        
-        
+                
         return render(request, "contact.html", {'name_form': name_form})
     else:
         return render(request, "contact.html", {})
