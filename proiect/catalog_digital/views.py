@@ -20,7 +20,7 @@ def contact(request):
             name_form,
             message_form,
             email_form,
-            ['myschool796@yahoo.com'],    
+            ['schoolmy640@gmail.com'],    
         )
                 
         return render(request, "contact.html", {'name_form': name_form})
