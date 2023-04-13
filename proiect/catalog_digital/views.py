@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from .models import Elevi
 
 
 # Create your views here.
@@ -36,7 +37,24 @@ def index(request):
     return render(request, "index.html", {})
 
 def classs(request):
-    return render(request, "class.html", {})
+    if request.method == "POST":
+        name_elev = request.POST['class_name']
+        adresa_mail_elev = request.POST['class_email']
+        phone_number = request.POST['class_phone']
+        message_form = request.POST['message_form']  
+        
+        # send an email 
+        
+        send_mail(
+            name_elev,
+            adresa_mail_elev,
+            ['schoolmy640@gmail.com'],    
+        )
+                
+        return render(request, "class.html", {'name_form': name_elev})
+    else:
+        return render(request, "class.html", {})
+    
 
 def team(request):
     return render(request, "team.html", {})
