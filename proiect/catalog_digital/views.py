@@ -21,7 +21,7 @@ def contact(request):
             name_form,
             message_form,
             email_form,
-            ['schoolmy640@gmail.com'],    
+            ['schoolmy316@gmail.com'],    
         )
                 
         return render(request, "contact.html", {'name_form': name_form})
@@ -39,16 +39,15 @@ def index(request):
 def classs(request):
     if request.method == "POST":
         name_elev = request.POST['class_name']
+        name_parent = request.POST['class_parent']
         adresa_mail_elev = request.POST['class_email']
-        phone_number = request.POST['class_phone']
-        message_form = request.POST['message_form']  
-        
+        phone_number = request.POST['class_phone']        
         # send an email 
         
         send_mail(
-            name_elev,
-            adresa_mail_elev,
-            ['schoolmy640@gmail.com'],    
+            name_elev,"Child of", name_parent,
+            adresa_mail_elev,  phone_number
+            ['schoolmy316@gmail.com'],    
         )
                 
         return render(request, "class.html", {'name_form': name_elev})
