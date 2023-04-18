@@ -38,19 +38,24 @@ def index(request):
 
 def classs(request):
     if request.method == "POST":
-        name_elev = request.POST['class_name']
-        name_parent = request.POST['class_parent']
-        adresa_mail_elev = request.POST['class_email']
-        phone_number = request.POST['class_phone']        
+        name_elev = request.POST['class-name']
+        name_parent = request.POST['class-parent']
+        mail_addres = request.POST['class-email']
+        phone_number = request.POST['class-phone']     
+        class_selection = request.POST.get('class-selection', True)
+
+        
+           
         # send an email 
         
         send_mail(
-            name_elev,"Child of", name_parent,
-            adresa_mail_elev,  phone_number
-            ['schoolmy316@gmail.com'],    
+            'Class Registration',
+            f'Child Name: {name_elev}, Parent Name: {name_parent}, Email Adress: {mail_addres}, Phone Number:{phone_number},Selected Class:{class_selection}',
+            mail_addres,
+            ['schoolmy316@gmail.com']
         )
                 
-        return render(request, "class.html", {'name_form': name_elev})
+        return render(request, "test.html", {'class-elev': name_elev })
     else:
         return render(request, "class.html", {})
     
@@ -60,3 +65,6 @@ def team(request):
 
 def gallery(request):
     return render(request, "gallery.html", {})
+
+def test(request):
+    return render(request, "test.html", {})
