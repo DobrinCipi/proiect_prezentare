@@ -55,7 +55,7 @@ def classs(request):
             ['schoolmy316@gmail.com']
         )
                 
-        return render(request, "test.html", {'class-elev': name_elev })
+        return render(request, "class.html", {'class-elev': name_elev })
     else:
         return render(request, "class.html", {})
     
