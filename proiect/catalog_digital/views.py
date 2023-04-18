@@ -42,7 +42,7 @@ def classs(request):
         name_parent = request.POST['class-parent']
         mail_addres = request.POST['class-email']
         phone_number = request.POST['class-phone']     
-        class_selection = request.POST.get('class-selection', True)
+        class_selection = request.POST.get('class-selection', False)
 
         
            
