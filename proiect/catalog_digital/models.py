@@ -49,7 +49,6 @@ class Elevi(models.Model):
     nume_parinte = models.CharField(max_length=30)
     numar_telefon_elev = models.IntegerField()
     adresa_mail_elev = models.EmailField()
-    #scoala = models.TextField()
     clasa = models.CharField(max_length=30)
     
     def __str__(self):
