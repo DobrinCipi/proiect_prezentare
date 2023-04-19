@@ -19,12 +19,12 @@ class ProfesorAdmin(admin.ModelAdmin):
     
 class ElevAdmin(admin.ModelAdmin):
     list_display = ("nume_elev", "clasa")
-    list_filter = ("scoala", "clasa", "nume_elev" )
+    list_filter = ("clasa", "nume_elev" )
     search_fields = ("clasa", "nume_elev",)
 
 # Register your models here.
-admin.site.register(Scoala, ScoalaAdmin)
-admin.site.register(ClaseScoala, ClaseAdmin)
-admin.site.register(Profesori, ProfesorAdmin)
+#admin.site.register(Scoala, ScoalaAdmin)
+#admin.site.register(ClaseScoala, ClaseAdmin)
+#admin.site.register(Profesori, ProfesorAdmin)
 admin.site.register(Elevi, ElevAdmin)
-admin.site.register(ParinteElev)
+#admin.site.register(ParinteElev)

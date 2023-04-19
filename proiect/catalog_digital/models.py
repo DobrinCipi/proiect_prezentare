@@ -46,10 +46,11 @@ class Elevi(models.Model):
         verbose_name_plural = "Elevi"
         
     nume_elev = models.CharField(max_length=30)
+    nume_parinte = models.CharField(max_length=30)
     numar_telefon_elev = models.IntegerField()
     adresa_mail_elev = models.EmailField()
-    scoala = models.OneToOneField(Scoala, on_delete=models.CASCADE)
-    clasa = models.OneToOneField(ClaseScoala, on_delete=models.CASCADE)
+    #scoala = models.TextField()
+    clasa = models.CharField(max_length=30)
     
     def __str__(self):
         return f"{self.nume_elev} {self.adresa_mail_elev}"
