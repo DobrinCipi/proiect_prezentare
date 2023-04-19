@@ -34,7 +34,25 @@ def about(request):
     return render(request, "about.html", {})
 
 def index(request):
-    return render(request, "index.html", {})
+    if request.method == "POST":
+        name_registration = request.POST['news_name']
+        email_registration = request.POST['news_email']
+
+        
+           
+        # send an email 
+        
+        send_mail(
+            'Newsletter Registration',
+            name_registration,
+            email_registration,
+            ['schoolmy316@gmail.com']
+        )
+                
+        return render(request, "index.html", {})
+    else:
+        return render(request, "index.html", {})
+    
 
 def classs(request):
     if request.method == "POST":
@@ -61,10 +79,85 @@ def classs(request):
     
 
 def team(request):
-    return render(request, "team.html", {})
+    if request.method == "POST":
+        name_registration = request.POST['news_name']
+        email_registration = request.POST['news_email']
+
+        
+           
+        # send an email 
+        
+        send_mail(
+            'Newsletter Registration',
+            name_registration,
+            email_registration,
+            ['schoolmy316@gmail.com']
+        )
+                
+        return render(request, "team.html", {})
+    else:
+        return render(request, "team.html", {})
 
 def gallery(request):
-    return render(request, "gallery.html", {})
+    if request.method == "POST":
+        name_registration = request.POST['news_name']
+        email_registration = request.POST['news_email']
+
+        
+           
+        # send an email 
+        
+        send_mail(
+            'Newsletter Registration',
+            name_registration,
+            email_registration,
+            ['schoolmy316@gmail.com']
+        )
+                
+        return render(request, "gallery.html", {})
+    else:
+        return render(request, "gallery.html", {})
+    
 
 def test(request):
     return render(request, "test.html", {})
+
+def contact_registration(request):
+    if request.method == "POST":
+        name_registration = request.POST['news_name']
+        email_registration = request.POST['news_email']
+
+        
+           
+        # send an email 
+        
+        send_mail(
+            'Newsletter Registration',
+            name_registration,
+            email_registration,
+            ['schoolmy316@gmail.com']
+        )
+                
+        return render(request, "contact.html", {})
+    else:
+        return render(request, "contact.html", {})
+    
+def class_registration(request):
+    if request.method == "POST":
+        name_registration = request.POST['news_name']
+        email_registration = request.POST['news_email']
+
+        
+           
+        # send an email 
+        
+        send_mail(
+            'Newsletter Registration',
+            name_registration,
+            email_registration,
+            ['schoolmy316@gmail.com']
+        )
+                
+        return render(request, "class.html", {})
+    else:
+        return render(request, "class.html", {})
