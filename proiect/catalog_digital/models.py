@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Scoala(models.Model):
     
@@ -47,8 +48,8 @@ class Elevi(models.Model):
         
     nume_elev = models.CharField(max_length=30)
     nume_parinte = models.CharField(max_length=30)
-    numar_telefon_elev = models.IntegerField()
-    adresa_mail_elev = models.EmailField()
+    numar_telefon = models.CharField(max_length=10)
+    adresa_mail = models.EmailField()
     clasa = models.CharField(max_length=30)
     
     def __str__(self):
