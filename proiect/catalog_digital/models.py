@@ -53,7 +53,7 @@ class Elevi(models.Model):
     clasa = models.CharField(max_length=30)
     
     def __str__(self):
-        return f"{self.nume_elev} {self.adresa_mail_elev}"
+        return f"{self.nume_elev} {self.adresa_mail}"
     
 class ParinteElev(models.Model):
     class Meta():

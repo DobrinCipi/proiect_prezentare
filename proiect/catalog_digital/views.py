@@ -57,7 +57,7 @@ def index(request):
 def classs(request):
     if request.method == "POST":
         name_elev = request.POST['class-name']
-        name_parent = request.POST['class-parent']
+        name_parent = request.POST['class_parent']
         mail_addres = request.POST['class-email']
         phone_number = request.POST['class-phone']     
         class_selection = request.POST['class-selection']
@@ -73,7 +73,7 @@ def classs(request):
             ['schoolmy316@gmail.com']
         )
                 
-        return render(request, "class.html", {'class-elev': name_elev })
+        return render(request, "class.html", {'class_parent': name_parent })
     else:
         return render(request, "class.html", {})
     
