@@ -18,7 +18,7 @@ def contact(request):
         # send an email 
         
         send_mail(
-            name_form,
+            f'{name_form}, {email_form}',
             message_form,
             email_form,
             ['schoolmy316@gmail.com'],    
